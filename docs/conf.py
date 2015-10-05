@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Montage API'
+project = u'Montage'
 copyright = u'2015, Edit, LLC'
 author = u'Edit, LLC'
 
