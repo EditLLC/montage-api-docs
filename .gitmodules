@@ -1,0 +1,3 @@
+[submodule "sphinx-granite"]
+	path = sphinx-granite
+	url = https://github.com/dmpayton/sphinx-granite.git
