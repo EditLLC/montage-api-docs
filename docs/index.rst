@@ -102,7 +102,7 @@ Web framework integrations
                 <a href="https://github.com/EditLLC/rails-montage" class="card-link">
                     <span class="fa fa-github"></span> Source
                 </a>
-                <a href="rails/quickstart.html" class="card-link">
+                <a href="https://github.com/EditLLC/rails-montage/blob/master/README.md" class="card-link">
                     <span class="fa fa-book"></span> Docs
                 </a>
             </div>
