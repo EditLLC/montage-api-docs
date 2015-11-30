@@ -116,7 +116,7 @@ Web framework integrations
 .. raw:: html
 
     <div class="row text-center">
-        <div class="col-sm-6 col-xl-3">
+        <!-- <div class="col-sm-6 col-xl-3">
             <div class="card">
                 <div class="card-block">
                     <img src="_static/lang/django.svg" alt="Django" />
@@ -137,7 +137,7 @@ Web framework integrations
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="col-sm-6 col-xl-3">
             <div class="card">
