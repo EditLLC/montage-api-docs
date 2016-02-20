@@ -120,7 +120,7 @@ Querying documents
     .. code-block:: javascript
 
         var query = new montage.Query();
-        query = query.filter({author: 'Eric Calpton'});
+        query = query.filter({author: 'Eric Clapton'});
         query = query.order('rating', 'desc');
         client.documents('songs', query).then(response => {
             console.log(response.data);
