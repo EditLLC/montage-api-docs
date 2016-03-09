@@ -6,10 +6,18 @@ All API endpoints are mounted to the project domain::
 
     https://<project>.mntge.com
 
+
 Authentication
 ==============
 
-.. http:post:: /api/v1/auth/
+.. http:get:: /api/v1/user/
+
+    Get the current users information
+
+    :reqheader Authorization: Access token to authorize the request
+
+
+.. http:post:: /api/v1/user/
 
     Retrieve a users access token, which is required for other endpoints.
 
@@ -27,18 +35,59 @@ Authentication
         Authorization: Token 59e1d663-f19c-4330-9008-4c33208c9671
 
 
-.. http:get:: /api/v1/auth/user/
+Users
+=====
 
-    Get the current users information
+
+.. http:get:: /api/v1/users/
+
+    List all users.
+
+
+.. http:post:: /api/v1/users/
+
+    Create a new user
+
+    :query full_name: Name (first + last)
+    :query email: Email address
+    :query password: Password
+
+
+.. http:get:: /api/v1/user/<int:user_id>/
+
+    Retrieve the information for a single user.
+
+
+.. http:put:: /api/v1/user/<int:user_id>/
+
+    Update the information for a single user.
+
+
+.. http:patch:: /api/v1/user/<int:user_id>/
+
+    Partially update the information for a single user.
+
+
+.. http:delete:: /api/v1/files/<user_id>/
+
+    Delete a user
+
+
+
+Running scripts and queries
+===========================
+
+
+.. http:get:: /api/v1/query/
+
+    Perform a data query, run a committed script, or run arbitrary Lua code.
 
     :reqheader Authorization: Access token to authorize the request
 
 
-Data
-====
-
 Schemas
--------
+=======
+
 
 .. http:get:: /api/v1/schemas/
 
@@ -55,28 +104,7 @@ Schemas
 
 
 Documents
----------
-
-.. http:get:: /api/v1/schemas/<str:schema>/query/
-
-    Create a new query cursor and return the first batch of results OR
-    get a batch of results for the specified cursor.
-
-    :query query: A JSON-encoded query descriptor
-    :query cursor: A cursor descriptor representing a batch of documents
-        in a query results set.
-
-    A GET request must include
-
-    :reqheader Authorization: Access token to authorize the request
-
-
-.. http:post:: /api/v1/schemas/<str:schema>/query/
-
-    Create a new query cursor. POST data must be a JSON query that conforms to
-    the **query** parameter of the GET method.
-
-    :reqheader Authorization: Access token to authorize the request
+=========
 
 
 .. http:post:: /api/v1/schemas/<str:schema>/save/
