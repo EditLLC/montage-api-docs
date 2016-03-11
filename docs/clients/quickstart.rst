@@ -44,7 +44,7 @@ Getting started
     .. code-block:: python
 
         import montage
-        client = montage.Client(project='<project>')
+        client = montage.Client(subdomain='<project>')
 
 .. container:: example ruby
 
@@ -57,4 +57,4 @@ Getting started
     .. code-block:: javascript
 
         var montage = require('montagedata');
-        var client = montage.Client({domain: '<project>'});
+        var client = montage.Client({subdomain: '<project>'});

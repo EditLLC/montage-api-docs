@@ -170,12 +170,15 @@ Web framework integrations
 
     clients/quickstart
     clients/usage
-    clients/orm
 
 .. toctree::
     :caption: REST API
     :hidden:
     :maxdepth: 2
 
-    api/endpoints
-    api/query
+    api/authentication
+    api/users
+    api/schemas
+    api/documents
+    api/processing
+    api/files

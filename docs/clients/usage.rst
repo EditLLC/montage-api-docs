@@ -15,10 +15,7 @@ the initialization of the `Client`.
 
     .. code-block:: python
 
-        client = montage.Client(
-            project='<project>',
-            token='<api token>'
-        )
+        client = montage.Client('<project>', '<api token>')
 
 .. container:: example ruby
 
@@ -30,10 +27,7 @@ the initialization of the `Client`.
 
     .. code-block:: javascript
 
-        var client = montage.Client({
-            domain:'<project>',
-            token:'<api token>'
-        });
+        var client = new montage.Client('<project>', '<api token>');
 
 
 User credentials
@@ -43,13 +37,13 @@ Calling the `.authenticate()` method on a `Client` instance will authenticate
 against the Montage API. The authentication endpoint returns the users API
 token to be used in subsequent API requests.
 
-**Credentials must not be stored in any way after the authentication process.**
+**Credentials should not be stored in any way after the authentication process.**
 
 .. container:: example python
 
     .. code-block:: python
 
-        client.authenticate(email='...', password='...')
+        client.authenticate('<email>', '<password>')
 
 .. container:: example ruby
 
@@ -61,12 +55,8 @@ token to be used in subsequent API requests.
 
     .. code-block:: javascript
 
-        var client = montage.Client({
-            domain: '<project>',
-            username: '...',
-            password: '...'
-        });
-        client.auth();
+        var client = new montage.Client('<project>');
+        client.authenticate('<email>', '<password>');
 
 Base API layer
 ==============
@@ -78,8 +68,8 @@ Schemas
 
     .. code-block:: python
 
-        schema = client.schema('...')
-        schema.detail()
+        >>> client.schemas.list()
+        >>> client.schemas.get('movies')
 
 .. container:: example ruby
 
@@ -91,8 +81,7 @@ Schemas
 
     .. code-block:: javascript
 
-        client.schemas().then(x => {console.log(x.data)});
-        client.schema('...');
+        client.schemas.list().then(x => {console.log(x.data)});
 
 Querying documents
 ------------------
@@ -101,13 +90,11 @@ Querying documents
 
     .. code-block:: python
 
-        query = schema.documents.query()  # Effectively, fetch all
-        query = query.filter(**kwargs)
-        query = query.limit(0)
-        query = query.offset(0)
-        query = query.order(field[, ordering=asc|desc])
-        for document in query:
-            print document['id']
+        >>> query = montage.Query('movies')
+        >>> query = query.filter(montage.Field('year') >= 2000)
+        >>> query = query.limit(10)
+        >>> query = query.order_by('rating')
+        >>> montage.run(query=query)
 
 .. container:: example ruby
 
