@@ -178,6 +178,8 @@ Web framework integrations
 
     api/authentication
     api/users
+    api/roles
+    api/policies
     api/schemas
     api/documents
     api/processing

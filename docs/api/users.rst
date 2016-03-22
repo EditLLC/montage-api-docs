@@ -17,15 +17,11 @@ Create a new user
     :query email: Email address
     :query password: Password
 
-    :reqheader Authorization: Access token to authorize the request
-
 
 Get a single user
 =================
 
 .. http:get:: /api/v1/user/<int:user_id>/
-
-    :reqheader Authorization: Access token to authorize the request
 
 
 Update a user
@@ -37,17 +33,11 @@ Update a user
     :query email: Email address
     :query password: Password
 
-    :reqheader Authorization: Access token to authorize the request
-
 
 .. http:patch:: /api/v1/user/<int:user_id>/
-
-    :reqheader Authorization: Access token to authorize the request
 
 
 Delete a user
 =============
 
-.. http:delete:: /api/v1/files/<user_id>/
-
-    :reqheader Authorization: Access token to authorize the request
+.. http:delete:: /api/v1/users/<int:user_id>/
