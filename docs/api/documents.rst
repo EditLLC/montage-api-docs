@@ -21,7 +21,9 @@ Get a single document
 Update a document
 =================
 
-.. http:post:: /api/v1/schemas/<str:schema>/documents/<uuid:document_id>/
+.. http:put:: /api/v1/schemas/<str:schema>/documents/<uuid:document_id>/
+
+.. http:patch:: /api/v1/schemas/<str:schema>/documents/<uuid:document_id>/
 
 
 Delete a document

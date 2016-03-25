@@ -176,6 +176,7 @@ Web framework integrations
     :hidden:
     :maxdepth: 2
 
+    api/index
     api/authentication
     api/users
     api/roles
