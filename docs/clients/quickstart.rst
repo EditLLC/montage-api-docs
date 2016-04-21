@@ -7,12 +7,11 @@ Installation
 
 .. container:: example python
 
-    The Python library is available on the Python Package Index and can be
-    installed with pip.
+    The Python library can be installed with pip.
 
     .. code-block:: bash
 
-        pip install --upgrade montage
+        pip install -e git+git://github.com/EditLLC/python-montage@master#egg=montage
 
 .. container:: example ruby
 
@@ -33,18 +32,15 @@ Installation
         # TODO
 
 
-Getting started
-===============
+Creating a client instance
+==========================
 
 .. container:: example python
-
-    Using the library is as easy as importing and instantiating a new
-    client instance.
 
     .. code-block:: python
 
         import montage
-        client = montage.Client(subdomain='<project>')
+        client = montage.Client(subdomain)
 
 .. container:: example ruby
 
@@ -57,4 +53,4 @@ Getting started
     .. code-block:: javascript
 
         var montage = require('montagedata');
-        var client = montage.Client({subdomain: '<project>'});
+        var client = new montage.Client(subdomain);
