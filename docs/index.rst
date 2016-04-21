@@ -5,8 +5,6 @@ Your data can do better
 Supported languages
 ===================
 
-
-
 .. raw:: html
 
     <style type="text/css">
@@ -42,29 +40,6 @@ Supported languages
         <div class="col-sm-6 col-xl-3">
             <div class="card">
                 <div class="card-block">
-                    <img src="_static/lang/ruby.svg" alt="ruby" />
-                </div>
-                <div class="card-block">
-                    <h4 class="card-title">Ruby</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="https://github.com/EditLLC/ruby-montage">
-                                <span class="fa fa-github"></span> Source
-                            </a>
-                        </li>
-                        <li>
-                            <a href="clients/quickstart.html?example=ruby">
-                                <span class="fa fa-book"></span> Docs
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-xl-3">
-            <div class="card">
-                <div class="card-block">
                     <img src="_static/lang/javascript.svg" alt="JavaScript" />
                 </div>
                 <div class="card-block">
@@ -77,6 +52,29 @@ Supported languages
                         </li>
                         <li>
                             <a href="clients/quickstart.html?example=javascript">
+                                <span class="fa fa-book"></span> Docs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="card">
+                <div class="card-block">
+                    <img src="_static/lang/ruby.svg" alt="ruby" />
+                </div>
+                <div class="card-block">
+                    <h4 class="card-title">Ruby</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://github.com/EditLLC/ruby-montage">
+                                <span class="fa fa-github"></span> Source
+                            </a>
+                        </li>
+                        <li>
+                            <a href="clients/quickstart.html?example=ruby">
                                 <span class="fa fa-book"></span> Docs
                             </a>
                         </li>
@@ -108,6 +106,9 @@ Supported languages
             </div>
         </div>
     </div>
+
+
+-----
 
 
 Web framework integrations
@@ -142,6 +143,24 @@ Web framework integrations
         <div class="col-sm-6 col-xl-3">
             <div class="card">
                 <div class="card-block">
+                    <img src="_static/lang/angularjs.svg" alt="AngularJS" />
+                </div>
+                <div class="card-block">
+                    <h4 class="card-title">AngularJS</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://github.com/editllc/angular-montage">
+                                <span class="fa fa-github"></span> Source
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="card">
+                <div class="card-block">
                     <img src="_static/lang/rails.svg" alt="Rails" />
                 </div>
                 <div class="card-block">
@@ -164,17 +183,35 @@ Web framework integrations
     </div>
 
 .. toctree::
-    :caption: Client libraries
+    :caption: The Basics
     :hidden:
-    :maxdepth: 2
+    :maxdepth: 1
 
     clients/quickstart
-    clients/usage
+    clients/authentication
+
+.. toctree::
+    :caption: Users and Access
+    :hidden:
+    :maxdepth: 1
+
+    clients/users
+    clients/roles
+    clients/permissions
+
+.. toctree::
+    :caption: Data
+    :hidden:
+    :maxdepth: 1
+
+    clients/schemas
+    clients/documents
+    clients/files
 
 .. toctree::
     :caption: REST API
     :hidden:
-    :maxdepth: 2
+    :maxdepth: 1
 
     api/index
     api/authentication
