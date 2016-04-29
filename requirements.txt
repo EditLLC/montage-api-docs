@@ -1,2 +1,4 @@
+invoke==0.12.2
+livereload==2.4.1
 Sphinx<=1.4
 sphinxcontrib-httpdomain<=1.3
