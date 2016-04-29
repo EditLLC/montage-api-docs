@@ -15,7 +15,7 @@ List policies
 
     .. code-block:: javascript
 
-        client.policies.list().then(x => { console.log(x.data) });
+        client.policies.list()
 
 
 Create policy
@@ -31,7 +31,7 @@ Create policy
 
     .. code-block:: javascript
 
-        client.policies.create(description, policy).then(x => { console.log(x.data) });
+        client.policies.create(description, policy)
 
 
 
@@ -48,7 +48,7 @@ Get policy
 
     .. code-block:: javascript
 
-        client.policies.get(policy_id).then(x => { console.log(x.data) });
+        client.policies.get(policy_id)
 
 
 Update policy
@@ -64,7 +64,7 @@ Update policy
 
     .. code-block:: javascript
 
-        client.policies.update([description[, policy]]).then(x => { console.log(x.data) });
+        client.policies.update([description[, policy]])
 
 
 Remove policy
@@ -80,4 +80,4 @@ Remove policy
 
     .. code-block:: javascript
 
-        client.policies.remove(policy_id).then(x => { console.log(x.data) });
+        client.policies.remove(policy_id)

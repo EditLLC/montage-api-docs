@@ -60,6 +60,7 @@ Supported languages
             </div>
         </div>
 
+        <!--
         <div class="col-sm-6 col-xl-3">
             <div class="card">
                 <div class="card-block">
@@ -105,6 +106,8 @@ Supported languages
                 </div>
             </div>
         </div>
+        -->
+
     </div>
 
 
@@ -158,6 +161,7 @@ Web framework integrations
             </div>
         </div>
 
+        <!--
         <div class="col-sm-6 col-xl-3">
             <div class="card">
                 <div class="card-block">
@@ -180,6 +184,7 @@ Web framework integrations
                 </div>
             </div>
         </div>
+        -->
     </div>
 
 .. toctree::
@@ -188,7 +193,6 @@ Web framework integrations
     :maxdepth: 1
 
     clients/quickstart
-    clients/authentication
 
 .. toctree::
     :caption: Users and Access
@@ -206,19 +210,12 @@ Web framework integrations
 
     clients/schemas
     clients/documents
+    clients/queries/index
     clients/files
 
 .. toctree::
-    :caption: REST API
+    :caption: Reference
     :hidden:
     :maxdepth: 1
 
     api/index
-    api/authentication
-    api/users
-    api/roles
-    api/policies
-    api/schemas
-    api/documents
-    api/processing
-    api/files

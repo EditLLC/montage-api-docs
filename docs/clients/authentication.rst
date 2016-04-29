@@ -14,11 +14,6 @@ the initialization of the `Client`.
 
         client = montage.Client(subdomain, token)
 
-.. container:: example ruby
-
-    .. code-block:: ruby
-
-        # TODO
 
 .. container:: example javascript
 
@@ -41,12 +36,6 @@ token to be used in subsequent API requests.
     .. code-block:: python
 
         client.authenticate(email, password)
-
-.. container:: example ruby
-
-    .. code-block:: ruby
-
-        # TODO
 
 .. container:: example javascript
 

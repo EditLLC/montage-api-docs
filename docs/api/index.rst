@@ -1,5 +1,5 @@
 ========
-Overview
+REST API
 ========
 
 API URL
@@ -12,8 +12,24 @@ your Montage database, you would call::
     https://your-project.mntge.com/api/v1/schemas/
 
 
-Payloads
-========
+Payload
+=======
 
 All create and update endpoints (`POST`, `PUT`, and `PATCH` requests) expect a
 JSON payload, not form-encoded values.
+
+
+API Endpoints
+=============
+
+.. toctree::
+    :maxdepth: 1
+
+    authentication
+    users
+    roles
+    policies
+    schemas
+    documents
+    processing
+    files

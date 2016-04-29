@@ -22,7 +22,7 @@ Save document
 
     .. code-block:: javascript
 
-        client.documents.create(name, fields).then(x => { console.log(x.data) });
+        client.documents.create(name, fields)
 
 
 
@@ -39,7 +39,7 @@ Get document
 
     .. code-block:: javascript
 
-        client.documents.get(schema_name, document_id).then(x => { console.log(x.data) });
+        client.documents.get(schema_name, document_id)
 
 
 Replace document
@@ -55,7 +55,7 @@ Replace document
 
     .. code-block:: javascript
 
-        client.documents.replace(schema_name, document).then(x => { console.log(x.data) });
+        client.documents.replace(schema_name, document)
 
 
 Update document
@@ -71,7 +71,7 @@ Update document
 
     .. code-block:: javascript
 
-        client.documents.update(schema_name, document_fragment).then(x => { console.log(x.data) });
+        client.documents.update(schema_name, document_fragment)
 
 
 Remove document
@@ -87,4 +87,4 @@ Remove document
 
     .. code-block:: javascript
 
-        client.documents.remove(schema_name, document_id).then(x => { console.log(x.data) });
+        client.documents.remove(schema_name, document_id)

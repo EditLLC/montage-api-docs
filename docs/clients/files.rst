@@ -12,6 +12,12 @@ List files
 
         client.files.list()
 
+.. container:: example javascript
+
+    .. code-block:: javascript
+
+        client.files.list()
+
 
 Save file
 =========
@@ -31,11 +37,22 @@ Save file
         client.files.save(('foo.txt', StringIO('This is foo.txt')))
         client.files.save(('foo.txt', 'This is foo.txt'))
 
+.. container:: example python
+
+    TODO.
+
+
 
 Get file
 ========
 
 .. container:: example python
+
+    .. code-block:: python
+
+        client.files.get(file_id)
+
+.. container:: example javascript
 
     .. code-block:: python
 
@@ -48,5 +65,11 @@ Remove file
 .. container:: example python
 
     .. code-block:: python
+
+        client.files.remove(file_id)
+
+.. container:: example javascript
+
+    .. code-block:: javascript
 
         client.files.remove(file_id)

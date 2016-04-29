@@ -15,7 +15,7 @@ List roles
 
     .. code-block:: javascript
 
-        client.roles.list().then(x => { console.log(x.data) });
+        client.roles.list()
 
 
 Create role
@@ -31,7 +31,7 @@ Create role
 
     .. code-block:: javascript
 
-        client.roles.create(name[, add_users]).then(x => { console.log(x.data) });
+        client.roles.create(name[, add_users])
 
 
 
@@ -48,7 +48,7 @@ Get role
 
     .. code-block:: javascript
 
-        client.roles.get(role_name).then(x => { console.log(x.data) });
+        client.roles.get(role_name)
 
 
 Update role
@@ -64,7 +64,7 @@ Update role
 
     .. code-block:: javascript
 
-        client.roles.get(role_name[, name[, add_users[, remove_users]]]).then(x => { console.log(x.data) });
+        client.roles.get(role_name[, name[, add_users[, remove_users]]])
 
 
 Remove role
@@ -80,4 +80,4 @@ Remove role
 
     .. code-block:: javascript
 
-        client.roles.remove(role_name).then(x => { console.log(x.data) });
+        client.roles.remove(role_name)

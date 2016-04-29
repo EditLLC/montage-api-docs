@@ -15,7 +15,7 @@ List schemas
 
     .. code-block:: javascript
 
-        client.schemas.list().then(x => { console.log(x.data) });
+        client.schemas.list()
 
 
 Create schema
@@ -31,7 +31,7 @@ Create schema
 
     .. code-block:: javascript
 
-        client.schemas.create(name, fields).then(x => { console.log(x.data) });
+        client.schemas.create(name, fields)
 
 
 
@@ -48,7 +48,7 @@ Get schema
 
     .. code-block:: javascript
 
-        client.schemas.get(name).then(x => { console.log(x.data) });
+        client.schemas.get(name)
 
 
 Update schema
@@ -64,7 +64,7 @@ Update schema
 
     .. code-block:: javascript
 
-        client.schemas.get(name).then(x => { console.log(x.data) });
+        client.schemas.get(name)
 
 
 Remove schema
@@ -80,4 +80,4 @@ Remove schema
 
     .. code-block:: javascript
 
-        client.schemas.remove(name).then(x => { console.log(x.data) });
+        client.schemas.remove(name)
