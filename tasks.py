@@ -1,9 +1,12 @@
 import invoke
 import livereload
+import os
 import shutil
 
 server = livereload.Server()
 
+def dir(path):
+    return os.path.abspath(os.path.join(os.getcwd(), path))
 
 @invoke.task
 def clean():
@@ -17,10 +20,10 @@ def build():
 
 @invoke.task(pre=[build])
 def serve():
-    server.watch('./_static/**/*', build);
-    server.watch('./_templates/**/*', build);
-    server.watch('./docs/**/*', build);
-    server.watch('./granite/**/*', build);
+    server.watch(dir('./docs/'), build)
+    server.watch(dir('./granite/'), build)
+    server.watch(dir('../sphinx-granite/'), build)
+
     server.serve(
         root='./build',
         host='localhost',
