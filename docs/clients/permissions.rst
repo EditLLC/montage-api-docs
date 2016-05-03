@@ -75,16 +75,6 @@ Optional.
         "<condition>": {"<operator>": <value>}
     }
 
-===================== ========================================================= =============
-Condition             Supported operators                                       Value
-===================== ========================================================= =============
-``request.ip``        ``eq``, ``ne``                                            Array
-``request.host``      ``eq``, ``ne``                                            Array
-``request.referer``   ``eq``, ``ne``                                            Array
-``date``              ``eq``, ``ne``, ``gt``, ``ge``, ``lt``, ``le``            String
-``time``              ``eq``, ``ne``, ``gt``, ``ge``, ``lt``, ``le``            String
-``datetime``          ``eq``, ``ne``, ``gt``, ``ge``, ``lt``, ``le``            String
-===================== ========================================================= =============
 
 ``request.ip``
 ^^^^^^^^^^^^^^
@@ -138,37 +128,7 @@ Supported operators: ``eq``, ``ne``
     }
 
 
-``date``
-^^^^^^^^
-
-Supported operators: ``eq``, ``ne``, ``gt``, ``ge``, ``lt``, ``le``
-
-.. code-block:: javascript
-
-    {
-        # ...
-        "condition": {
-            "date": {"gt": "2016-07-24"}
-        }
-    }
-
-
-``time``
-^^^^^^^^
-
-Supported operators: ``eq``, ``ne``, ``gt``, ``ge``, ``lt``, ``le``
-
-.. code-block:: javascript
-
-    {
-        # ...
-        "condition": {
-            "time": {"lt": "17:00"}
-        }
-    }
-
-
-``datetime``
+``now.date``
 ^^^^^^^^^^^^
 
 Supported operators: ``eq``, ``ne``, ``gt``, ``ge``, ``lt``, ``le``
@@ -178,7 +138,37 @@ Supported operators: ``eq``, ``ne``, ``gt``, ``ge``, ``lt``, ``le``
     {
         # ...
         "condition": {
-            "datetime": {"ge": "2016-07-24 20:07"}
+            "now.date": {"gt": "2016-07-24"}
+        }
+    }
+
+
+``now.time``
+^^^^^^^^^^^^
+
+Supported operators: ``eq``, ``ne``, ``gt``, ``ge``, ``lt``, ``le``
+
+.. code-block:: javascript
+
+    {
+        # ...
+        "condition": {
+            "now.time": {"lt": "17:00"}
+        }
+    }
+
+
+``now.datetime``
+^^^^^^^^^^^^^^^^
+
+Supported operators: ``eq``, ``ne``, ``gt``, ``ge``, ``lt``, ``le``
+
+.. code-block:: javascript
+
+    {
+        # ...
+        "condition": {
+            "now.datetime": {"ge": "2016-07-24 20:07"}
         }
     }
 
